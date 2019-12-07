@@ -12,18 +12,18 @@ namespace Student_Management
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class Subject
     {
-        public int Id { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public System.DateTime Birthday { get; set; }
-        public int Class_id { get; set; }
-        public string Email { get; set; }
-        public string Home_Town { get; set; }
-        public string Subject_ID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Subject()
+        {
+            this.Students = new HashSet<Student>();
+        }
     
-        public virtual Class Class { get; set; }
-        public virtual Subject Subject { get; set; }
+        public string Subject_ID { get; set; }
+        public string Subject_Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

@@ -14,14 +14,15 @@ namespace Student_Management
     
     public partial class Class
     {
+        
         public Class()
         {
             this.Students = new HashSet<Student>();
         }
     
         public int Id { get; set; }
-        public string Name { get; set; }    
-
+        public string Name { get; set; }
+    
         public virtual ICollection<Student> Students { get; set; }
     }
 }

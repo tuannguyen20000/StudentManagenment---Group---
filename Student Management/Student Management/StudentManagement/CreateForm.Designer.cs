@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 420);
+            this.ClientSize = new System.Drawing.Size(425, 368);
             this.Controls.Add(this.txtHometown);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label5);

@@ -21,7 +21,15 @@ namespace Student_Management.StudentManagement
             this.btnAdd.Click += btnCreate_Click;
             this.btnDelete.Click += btnDelete_Click;
             this.grdStudent.DoubleClick += grdStudents_DoubleClick;
+            this.btnStatistic.Click += BtnStatistic_Click;
         }
+
+        private void BtnStatistic_Click(object sender, EventArgs e)
+        {
+            new StatisticForm().ShowDialog();
+            this.ShowAllStudent();
+        }
+
         void grdStudents_DoubleClick(object sender, EventArgs e)
         {
             if (this.grdStudent.SelectedRows.Count == 1)
@@ -35,7 +43,16 @@ namespace Student_Management.StudentManagement
 
         void btnDelete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (this.grdStudent.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("Do you want to delete this!!", "Comfirm", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    var @student = (StudentView)this.grdStudent.SelectedRows[0].DataBoundItem;
+                    this.Business.DeleteStudent(@student.Id);
+                    MessageBox.Show("Delete class successfully!!");
+                    this.ShowAllStudent();
+                }
+            }
         }
 
         void btnCreate_Click(object sender, EventArgs e)

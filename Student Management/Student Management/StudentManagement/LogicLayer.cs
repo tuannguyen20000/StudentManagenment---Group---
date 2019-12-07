@@ -10,13 +10,13 @@ namespace Student_Management.StudentManagement
     {
         public Student[] GetStudents()
         {
-            var db = new StudentEntities2();
+            var db = new StudentEntities3();
             return db.Students.ToArray();
         }
 
         public Student GetStudent(int id)
         {
-            var db = new StudentEntities2();
+            var db = new StudentEntities3();
             return db.Students.Find(id);
         }
 
@@ -30,16 +30,17 @@ namespace Student_Management.StudentManagement
             student.Email = email;
             student.Home_Town = hometown;
 
-            var db = new StudentEntities2();
+            var db = new StudentEntities3();
             db.Students.Add(student);
             db.SaveChanges();
         }
 
-        public void UpdateStudent(int id, string name, DateTime birthday, int class_id, string email, string hometown)
+        public void UpdateStudent(int id,string code ,string name, DateTime birthday, int class_id, string email, string hometown)
         {
-            var db = new StudentEntities2();
+            var db = new StudentEntities3();
             var student = db.Students.Find(id);
 
+            student.Code = code;
             student.Name = name;
             student.Birthday = birthday;
             student.Class_id = class_id;
@@ -52,7 +53,7 @@ namespace Student_Management.StudentManagement
 
         public void DeleteStudent(int id)
         {
-            var db = new StudentEntities2();
+            var db = new StudentEntities3();
             var student = db.Students.Find(id);
 
             db.Students.Remove(student);
@@ -60,7 +61,7 @@ namespace Student_Management.StudentManagement
         }
         public Class[] GetClasses()
         {
-            var db = new StudentEntities2();
+            var db = new StudentEntities3();
             return db.Classes.ToArray();
         }
     }

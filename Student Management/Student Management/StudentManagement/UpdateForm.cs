@@ -20,6 +20,8 @@ namespace Student_Management.StudentManagement
             this.StudentId = id;
             this.Business = new LogicLayer();
             this.Load += UpdateForm_Load;
+            this.btnSave.Click += BtnSave_Click;
+            this.btnCancel.Click += BtnCancel_Click;
         }
         void UpdateForm_Load(object sender, EventArgs e)
         {
@@ -30,5 +32,22 @@ namespace Student_Management.StudentManagement
             this.cboClass.SelectedValue = student.Class_id;
         }
 
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            var code = this.txtCode.Text;
+            var name = this.txtName.Text;
+            var birthday = this.dtpBirthday.Value;
+            var class_id = (int)this.cboClass.SelectedValue;
+            var email = this.txtEmail.Text;
+            var hometown = this.txtHometown.Text;
+            this.Business.UpdateStudent(this.StudentId, code ,name, birthday,class_id, email, hometown);
+            MessageBox.Show("Update successfully");
+            this.Close();
+        }
     }
 }

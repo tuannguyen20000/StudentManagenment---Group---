@@ -32,6 +32,7 @@
             this.btnAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.grdStudent = new System.Windows.Forms.DataGridView();
+            this.btnStatistic = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdStudent)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +42,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAdd,
-            this.btnDelete});
+            this.btnDelete,
+            this.btnStatistic});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -74,6 +76,12 @@
             this.grdStudent.Size = new System.Drawing.Size(800, 422);
             this.grdStudent.TabIndex = 1;
             // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(88, 24);
+            this.btnStatistic.Text = "STATISTIC";
+            // 
             // IndexForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -98,5 +106,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnAdd;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private System.Windows.Forms.DataGridView grdStudent;
+        private System.Windows.Forms.ToolStripMenuItem btnStatistic;
     }
 }
