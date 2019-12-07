@@ -120,6 +120,7 @@
       <DependentUpon>StatisticForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentManagement\StudentView.cs" />
+    <Compile Include="StudentManagement\SubjectView.cs" />
     <Compile Include="StudentManagement\UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>

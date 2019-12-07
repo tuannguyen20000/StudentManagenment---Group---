@@ -64,6 +64,11 @@ namespace Student_Management.StudentManagement
             var db = new StudentEntities3();
             return db.Classes.ToArray();
         }
+        public Subject[] getSubjects()
+        {
+            var db = new StudentEntities3();
+            return db.Subjects.toArray();
+        }
     }
 }
 
