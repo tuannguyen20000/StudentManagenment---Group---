@@ -39,6 +39,7 @@ namespace Student_Management.StudentManagement
 
                 new UpdateForm(studentView.Id).ShowDialog();
             }
+            this.ShowAllStudent();
         }
 
         void btnDelete_Click(object sender, EventArgs e)
