@@ -70,6 +70,7 @@ namespace Student_Management.StudentManagement
             for (int i = 0; i < students.Length; i++)
                 studentViews[i] = new StudentView(students[i]);
             this.grdStudent.DataSource = studentViews;
+            txtCount.Text = String.Format(students.Length.ToString());
         }
         void IndexForm_Load(object sender, EventArgs e)
         {
