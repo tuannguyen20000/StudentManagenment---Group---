@@ -32,8 +32,8 @@ namespace Student_Management.StudentManagement
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
-            var db = new StudentEntities3();
-            grdStudent.DataSource = db.Students.Where(x => x.Code.Contains(txtSearch.Text)).ToList();
+            var db = new StudentEntities4();
+            grdStudent.DataSource = db.Students.Where(x => x.Name.Contains(txtSearch.Text)).ToList();
         }
 
         private void TxtSearch_Enter(object sender, EventArgs e)

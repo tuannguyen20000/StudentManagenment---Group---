@@ -10,17 +10,17 @@ namespace Student_Management.StudentManagement
     {
         public Student[] GetStudents()
         {
-            var db = new StudentEntities3();
+            var db = new StudentEntities4();
             return db.Students.ToArray();
         }
 
         public Student GetStudent(int id)
         {
-            var db = new StudentEntities3();
+            var db = new StudentEntities4();
             return db.Students.Find(id);
         }
 
-        public void CreateStudent(string code, string name, DateTime birthday, int class_id, string email, string hometown, string subject)
+        public void CreateStudent(string code, string name, DateTime birthday, int class_id, string email, string hometown, string faculty)
         {
             var student = new Student();
             student.Code = code;
@@ -29,16 +29,16 @@ namespace Student_Management.StudentManagement
             student.Class_id = class_id;
             student.Email = email;
             student.Home_Town = hometown;
-            student.Subject_ID = subject;
+            student.Faculty_ID = faculty;
 
-            var db = new StudentEntities3();
+            var db = new StudentEntities4();
             db.Students.Add(student);
             db.SaveChanges();
         }
 
-        public void UpdateStudent(int id,string code ,string name, DateTime birthday, int class_id, string email, string hometown, string subject)
+        public void UpdateStudent(int id,string code ,string name, DateTime birthday, int class_id, string email, string hometown, string faculty)
         {
-            var db = new StudentEntities3();
+            var db = new StudentEntities4();
             var student = db.Students.Find(id);
 
             student.Code = code;
@@ -47,7 +47,7 @@ namespace Student_Management.StudentManagement
             student.Class_id = class_id;
             student.Email = email;
             student.Home_Town = hometown;
-            student.Subject_ID = subject;
+            student.Faculty_ID = faculty; ;
 
             db.Entry(student).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
@@ -55,7 +55,7 @@ namespace Student_Management.StudentManagement
 
         public void DeleteStudent(int id)
         {
-            var db = new StudentEntities3();
+            var db = new StudentEntities4();
             var student = db.Students.Find(id);
 
             db.Students.Remove(student);
@@ -63,13 +63,13 @@ namespace Student_Management.StudentManagement
         }
         public Class[] GetClasses()
         {
-            var db = new StudentEntities3();
+            var db = new StudentEntities4();
             return db.Classes.ToArray();
         }
-        public Subject[] getSubjects()
+        public Faculty[] getFaculty()
         {
-            var db = new StudentEntities3();
-            return db.Subjects.ToArray();
+            var db = new StudentEntities4();
+            return db.Faculties.ToArray();
         }
     }
 }

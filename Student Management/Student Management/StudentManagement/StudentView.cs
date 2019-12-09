@@ -15,8 +15,7 @@ namespace Student_Management.StudentManagement
         public string Class { get; set; }
         public string Email { get; set; }
         public string Home_Town { get; set; }
-
-        public string Subject_ID { get; set; }
+        public string Faculty_ID { get; set; }
         public StudentView(Student student)
         {
             this.Id = student.Id;
@@ -26,7 +25,7 @@ namespace Student_Management.StudentManagement
             this.Class = student.Class.Name;
             this.Email = student.Email;
             this.Home_Town = student.Home_Town;
-            this.Subject_ID = student.Subject_ID;
+            this.Faculty_ID = student.Faculty_ID;
         }
     }
 }

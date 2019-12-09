@@ -31,10 +31,10 @@ namespace Student_Management.StudentManagement
             this.cboClass.ValueMember = "id";
             this.cboClass.SelectedValue = student.Class_id;
 
-            this.cboSubject.DataSource = this.Business.getSubjects();
-            this.cboSubject.DisplayMember = "Subject_Name";
-            this.cboSubject.ValueMember = "Subject_ID";
-            this.cboSubject.SelectedValue = student.Subject_ID; 
+            this.cboFaculty.DataSource = this.Business.getFaculty();
+            this.cboFaculty.DisplayMember = "Faculty Name";
+            this.cboFaculty.ValueMember = "Faculty ID";
+            this.cboFaculty.SelectedValue = student.Faculty_ID; 
         }
         
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -50,8 +50,8 @@ namespace Student_Management.StudentManagement
             var class_id = (int)this.cboClass.SelectedValue;
             var email = this.txtEmail.Text;
             var hometown = this.txtHometown.Text;
-            var subject = (string)this.cboSubject.SelectedValue;
-            this.Business.UpdateStudent(this.StudentId, code ,name, birthday,class_id, email, hometown, subject);
+            var faculty = (string)this.cboFaculty.SelectedValue;
+            this.Business.UpdateStudent(this.StudentId, code ,name, birthday,class_id, email, hometown, faculty);
             MessageBox.Show("Update successfully");
             this.Close();
         }

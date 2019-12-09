@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Code = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboSubject = new System.Windows.Forms.ComboBox();
+            this.cboFaculty = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtHometown
@@ -101,12 +101,12 @@
             // 
             // cboClass
             // 
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.FormattingEnabled = true;
             this.cboClass.Location = new System.Drawing.Point(109, 96);
             this.cboClass.Margin = new System.Windows.Forms.Padding(4);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(290, 24);
-            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.TabIndex = 57;
             // 
             // dtpBirthday
@@ -178,26 +178,26 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 17);
+            this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 64;
-            this.label6.Text = "Subject";
+            this.label6.Text = "Faculty : ";
             // 
-            // cboSubject
+            // cboFaculty
             // 
-            this.cboSubject.FormattingEnabled = true;
-            this.cboSubject.Location = new System.Drawing.Point(109, 128);
-            this.cboSubject.Margin = new System.Windows.Forms.Padding(4);
-            this.cboSubject.Name = "cboSubject";
-            this.cboSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSubject.Size = new System.Drawing.Size(290, 24);
-            this.cboSubject.TabIndex = 65;
+            this.cboFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFaculty.FormattingEnabled = true;
+            this.cboFaculty.Location = new System.Drawing.Point(109, 128);
+            this.cboFaculty.Margin = new System.Windows.Forms.Padding(4);
+            this.cboFaculty.Name = "cboFaculty";
+            this.cboFaculty.Size = new System.Drawing.Size(290, 24);
+            this.cboFaculty.TabIndex = 65;
             // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 420);
-            this.Controls.Add(this.cboSubject);
+            this.Controls.Add(this.cboFaculty);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtHometown);
             this.Controls.Add(this.txtEmail);
@@ -238,7 +238,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Code;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboSubject;
+        private System.Windows.Forms.ComboBox cboFaculty;
         private System.Windows.Forms.ComboBox cboClass;
     }
 }

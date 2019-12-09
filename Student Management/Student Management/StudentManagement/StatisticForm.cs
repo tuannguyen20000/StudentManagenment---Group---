@@ -22,17 +22,17 @@ namespace Student_Management.StudentManagement
 
         private void StatisticForm_Load(object sender, EventArgs e)
         {
-            this.ShowAllSubject();
+            this.ShowAllFacullty();
         }
-        private void ShowAllSubject()
+        private void ShowAllFacullty()
         {
-            var subjects = this.Business.getSubjects();
-            var subjectviews = new SubjectView[subjects.Length];
-            for(int i = 0; i < subjectviews.Length; i++)
+            var faculty = this.Business.getFaculty();
+            var facultyviews = new FacultyView[faculty.Length];
+            for(int i = 0; i < facultyviews.Length; i++)
             {
-                subjectviews[i] = new SubjectView(subjects[i]);
+                facultyviews[i] = new FacultyView(faculty[i]);
             }
-            grdStatistic.DataSource = subjectviews;
+            grdStatistic.DataSource = facultyviews;
         }
 
     }

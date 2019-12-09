@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboSubject = new System.Windows.Forms.ComboBox();
+            this.cboFaculty = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtHometown = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -46,24 +46,24 @@
             this.Code = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cboSubject
+            // cboFaculty
             // 
-            this.cboSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSubject.FormattingEnabled = true;
-            this.cboSubject.Location = new System.Drawing.Point(109, 128);
-            this.cboSubject.Margin = new System.Windows.Forms.Padding(4);
-            this.cboSubject.Name = "cboSubject";
-            this.cboSubject.Size = new System.Drawing.Size(290, 24);
-            this.cboSubject.TabIndex = 81;
+            this.cboFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFaculty.FormattingEnabled = true;
+            this.cboFaculty.Location = new System.Drawing.Point(109, 128);
+            this.cboFaculty.Margin = new System.Windows.Forms.Padding(4);
+            this.cboFaculty.Name = "cboFaculty";
+            this.cboFaculty.Size = new System.Drawing.Size(290, 24);
+            this.cboFaculty.TabIndex = 81;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 131);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 17);
+            this.label6.Size = new System.Drawing.Size(53, 17);
             this.label6.TabIndex = 80;
-            this.label6.Text = "Subject";
+            this.label6.Text = "Faculty";
             // 
             // txtHometown
             // 
@@ -197,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 430);
-            this.Controls.Add(this.cboSubject);
+            this.Controls.Add(this.cboFaculty);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtHometown);
             this.Controls.Add(this.txtEmail);
@@ -224,7 +224,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboSubject;
+        private System.Windows.Forms.ComboBox cboFaculty;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtHometown;
         private System.Windows.Forms.TextBox txtEmail;
