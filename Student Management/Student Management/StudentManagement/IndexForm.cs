@@ -27,13 +27,30 @@ namespace Student_Management.StudentManagement
             txtSearch.ForeColor = Color.Gray;
             this.txtSearch.Leave += TxtSearch_Leave;
             this.txtSearch.Enter += TxtSearch_Enter;
-            this.txtSearch.TextChanged += TxtSearch_TextChanged;
+            this.btnSearch.Click += BtnSearch_Click;
         }
 
-        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        private void BtnSearch_Click(object sender, EventArgs e)
         {
-            var db = new StudentEntities4();
-            grdStudent.DataSource = db.Students.Where(x => x.Name.Contains(txtSearch.Text)).ToList();
+            grdStudent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach(DataGridViewRow row in grdStudent.Rows)
+                {
+                    if (row.Cells[1].Value.ToString().Equals(txtSearch.Text.ToLower()))
+                    {
+                        row.Selected = true;
+                        grdStudent.CurrentCell = row.Cells[1];
+                        return;
+                    }
+                }
+                throw new Exception();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("This code does not exist");
+                grdStudent.ClearSelection();
+            }
         }
 
         private void TxtSearch_Enter(object sender, EventArgs e)
