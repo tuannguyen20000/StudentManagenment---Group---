@@ -25,5 +25,6 @@ namespace Student_Management
     
         public virtual Class Class { get; set; }
         public virtual Subject Subject { get; set; }
+
     }
 }

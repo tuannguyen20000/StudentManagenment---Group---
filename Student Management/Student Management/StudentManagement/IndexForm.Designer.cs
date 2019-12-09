@@ -27,14 +27,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+        {           
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStatistic = new System.Windows.Forms.ToolStripMenuItem();
             this.grdStudent = new System.Windows.Forms.DataGridView();
-            this.txtCount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdStudent)).BeginInit();
             this.SuspendLayout();
@@ -48,26 +49,26 @@
             this.btnStatistic});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnAdd
             // 
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(123, 24);
+            this.btnAdd.Size = new System.Drawing.Size(123, 26);
             this.btnAdd.Text = "ADD STUDENT";
             // 
             // btnDelete
             // 
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(73, 24);
+            this.btnDelete.Size = new System.Drawing.Size(73, 26);
             this.btnDelete.Text = "DELETE";
             // 
             // btnStatistic
             // 
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(88, 24);
+            this.btnStatistic.Size = new System.Drawing.Size(88, 26);
             this.btnStatistic.Text = "STATISTIC";
             // 
             // grdStudent
@@ -81,34 +82,42 @@
             this.grdStudent.RowHeadersWidth = 51;
             this.grdStudent.RowTemplate.Height = 24;
             this.grdStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdStudent.Size = new System.Drawing.Size(800, 282);
+            this.grdStudent.Size = new System.Drawing.Size(800, 337);
             this.grdStudent.TabIndex = 1;
-            // 
-            // txtCount
-            // 
-            this.txtCount.Enabled = false;
-            this.txtCount.Location = new System.Drawing.Point(165, 334);
-            this.txtCount.Name = "txtCount";
-            this.txtCount.ReadOnly = true;
-            this.txtCount.Size = new System.Drawing.Size(131, 22);
-            this.txtCount.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 337);
+            this.label1.Location = new System.Drawing.Point(46, 399);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Number of Students : ";
+            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Search student : ";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(153, 396);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(138, 22);
+            this.txtSearch.TabIndex = 3;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(311, 396);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(115, 23);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // IndexForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCount);
             this.Controls.Add(this.grdStudent);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -119,7 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
         }
 
         #endregion
@@ -129,7 +139,8 @@
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private System.Windows.Forms.DataGridView grdStudent;
         private System.Windows.Forms.ToolStripMenuItem btnStatistic;
-        private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

@@ -48,6 +48,7 @@
             // 
             // cboSubject
             // 
+            this.cboSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSubject.FormattingEnabled = true;
             this.cboSubject.Location = new System.Drawing.Point(109, 128);
             this.cboSubject.Margin = new System.Windows.Forms.Padding(4);
@@ -119,6 +120,7 @@
             // 
             // cboClass
             // 
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.FormattingEnabled = true;
             this.cboClass.Location = new System.Drawing.Point(109, 96);
             this.cboClass.Margin = new System.Windows.Forms.Padding(4);
@@ -211,6 +213,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Code);
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
             this.Name = "UpdateForm";
             this.Text = "UpdateForm";
             this.ResumeLayout(false);

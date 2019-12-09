@@ -106,6 +106,7 @@
             this.cboClass.Margin = new System.Windows.Forms.Padding(4);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(290, 24);
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.TabIndex = 57;
             // 
             // dtpBirthday
@@ -187,6 +188,7 @@
             this.cboSubject.Location = new System.Drawing.Point(109, 128);
             this.cboSubject.Margin = new System.Windows.Forms.Padding(4);
             this.cboSubject.Name = "cboSubject";
+            this.cboSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSubject.Size = new System.Drawing.Size(290, 24);
             this.cboSubject.TabIndex = 65;
             // 
@@ -211,6 +213,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Code);
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
             this.Name = "CreateForm";
             this.Text = "CreateForm";
             this.ResumeLayout(false);
@@ -226,7 +230,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.ComboBox cboClass;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
@@ -236,5 +239,6 @@
         private System.Windows.Forms.Label Code;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboSubject;
+        private System.Windows.Forms.ComboBox cboClass;
     }
 }

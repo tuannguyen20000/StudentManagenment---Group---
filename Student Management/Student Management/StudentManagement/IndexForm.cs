@@ -13,6 +13,7 @@ namespace Student_Management.StudentManagement
     public partial class IndexForm : Form
     {
         private LogicLayer Business;
+        private Student studentview;
         public IndexForm()
         {
             InitializeComponent();
@@ -22,6 +23,35 @@ namespace Student_Management.StudentManagement
             this.btnDelete.Click += btnDelete_Click;
             this.grdStudent.DoubleClick += grdStudents_DoubleClick;
             this.btnStatistic.Click += BtnStatistic_Click;
+            txtSearch.Text = "Please enter code";
+            txtSearch.ForeColor = Color.Gray;
+            this.txtSearch.Leave += TxtSearch_Leave;
+            this.txtSearch.Enter += TxtSearch_Enter;
+            this.txtSearch.TextChanged += TxtSearch_TextChanged;
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var db = new StudentEntities3();
+            grdStudent.DataSource = db.Students.Where(x => x.Code.Contains(txtSearch.Text)).ToList();
+        }
+
+        private void TxtSearch_Enter(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "Please enter code")
+            {
+                txtSearch.Text = "";
+                txtSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtSearch_Leave(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+            {
+                txtSearch.Text = "Please enter code";
+                txtSearch.ForeColor = Color.Gray;
+            }
         }
 
         private void BtnStatistic_Click(object sender, EventArgs e)
@@ -70,12 +100,10 @@ namespace Student_Management.StudentManagement
             for (int i = 0; i < students.Length; i++)
                 studentViews[i] = new StudentView(students[i]);
             this.grdStudent.DataSource = studentViews;
-            txtCount.Text = String.Format(students.Length.ToString());
         }
         void IndexForm_Load(object sender, EventArgs e)
         {
             this.ShowAllStudent();
         }
-
     }
 }

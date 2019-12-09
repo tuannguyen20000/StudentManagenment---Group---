@@ -56,6 +56,8 @@
             this.Text = "StatisticForm";
             ((System.ComponentModel.ISupportInitialize)(this.grdStatistic)).EndInit();
             this.ResumeLayout(false);
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
 
         }
 
