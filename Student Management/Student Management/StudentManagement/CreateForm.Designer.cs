@@ -42,11 +42,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Code = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboSubject = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtHometown
             // 
-            this.txtHometown.Location = new System.Drawing.Point(109, 155);
+            this.txtHometown.Location = new System.Drawing.Point(108, 187);
             this.txtHometown.Multiline = true;
             this.txtHometown.Name = "txtHometown";
             this.txtHometown.Size = new System.Drawing.Size(290, 118);
@@ -54,7 +56,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(109, 127);
+            this.txtEmail.Location = new System.Drawing.Point(108, 159);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(290, 22);
             this.txtEmail.TabIndex = 62;
@@ -62,7 +64,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 158);
+            this.label5.Location = new System.Drawing.Point(12, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 61;
@@ -71,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 130);
+            this.label1.Location = new System.Drawing.Point(12, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 60;
@@ -79,7 +81,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(227, 304);
+            this.btnCancel.Location = new System.Drawing.Point(226, 338);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
@@ -89,7 +91,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(109, 304);
+            this.btnSave.Location = new System.Drawing.Point(108, 338);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
@@ -170,11 +172,31 @@
             this.Code.TabIndex = 50;
             this.Code.Text = "Code : ";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 131);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 17);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Subject";
+            // 
+            // cboSubject
+            // 
+            this.cboSubject.FormattingEnabled = true;
+            this.cboSubject.Location = new System.Drawing.Point(109, 128);
+            this.cboSubject.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSubject.Name = "cboSubject";
+            this.cboSubject.Size = new System.Drawing.Size(290, 24);
+            this.cboSubject.TabIndex = 65;
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 368);
+            this.ClientSize = new System.Drawing.Size(425, 420);
+            this.Controls.Add(this.cboSubject);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtHometown);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label5);
@@ -212,5 +234,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Code;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboSubject;
     }
 }

@@ -64,7 +64,7 @@ namespace Student_Management.StudentManagement
 
         private void ShowAllStudent()
         {
-            //this.grdStudents.DataSource = this.Business.GetStudents();
+           // this.grdStudent.DataSource = this.Business.GetStudents();
             var students = this.Business.GetStudents();
             var studentViews = new StudentView[students.Length];
             for (int i = 0; i < students.Length; i++)
@@ -76,5 +76,6 @@ namespace Student_Management.StudentManagement
         {
             this.ShowAllStudent();
         }
+
     }
 }

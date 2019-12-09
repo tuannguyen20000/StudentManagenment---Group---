@@ -22,9 +22,9 @@ namespace Student_Management.StudentManagement
 
         private void StatisticForm_Load(object sender, EventArgs e)
         {
-            this.loadAllSubjects();
+            this.ShowAllSubject();
         }
-        private void loadAllSubjects()
+        private void ShowAllSubject()
         {
             var subjects = this.Business.getSubjects();
             var subjectviews = new SubjectView[subjects.Length];
@@ -32,7 +32,8 @@ namespace Student_Management.StudentManagement
             {
                 subjectviews[i] = new SubjectView(subjects[i]);
             }
-            dataGridView1.DataSource = subjectviews;
+            grdStatistic.DataSource = subjectviews;
         }
+
     }
 }

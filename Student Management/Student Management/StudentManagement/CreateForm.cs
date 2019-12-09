@@ -34,7 +34,8 @@ namespace Student_Management.StudentManagement
             var class_id = (int)this.cboClass.SelectedValue;
             var email = this.txtEmail.Text;
             var hometown = this.txtHometown.Text;
-            this.Business.CreateStudent(code, name, birthday, class_id,email, hometown);
+            var subject = (string)this.cboSubject.SelectedValue;
+            this.Business.CreateStudent(code, name, birthday, class_id, email, hometown, subject);
             MessageBox.Show("Create student successfully");
             this.Close();
         }
@@ -44,6 +45,10 @@ namespace Student_Management.StudentManagement
             this.cboClass.DataSource = this.Business.GetClasses();
             this.cboClass.DisplayMember = "Name";
             this.cboClass.ValueMember = "id";
+
+            this.cboSubject.DataSource = this.Business.getSubjects();
+            this.cboSubject.DisplayMember = "Subject_Name";
+            this.cboSubject.ValueMember = "Subject_ID";
         }
     }
 }
