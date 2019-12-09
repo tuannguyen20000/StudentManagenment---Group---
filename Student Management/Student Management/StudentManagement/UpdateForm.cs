@@ -32,8 +32,8 @@ namespace Student_Management.StudentManagement
             this.cboClass.SelectedValue = student.Class_id;
 
             this.cboFaculty.DataSource = this.Business.getFaculty();
-            this.cboFaculty.DisplayMember = "Faculty Name";
-            this.cboFaculty.ValueMember = "Faculty ID";
+            this.cboFaculty.DisplayMember = "Faculty_Name";
+            this.cboFaculty.ValueMember = "Faculty_ID";
             this.cboFaculty.SelectedValue = student.Faculty_ID; 
         }
         
